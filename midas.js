@@ -1,5 +1,5 @@
  function clickPlayButton() {
-   const playButton = document.querySelectorAll('button.flex.font-semibold')
+   const playButton = document.querySelector('button.flex.font-semibold')
   if (playButton) {
     playButton.click();
     console.log("Clicked Play button.");
@@ -7,7 +7,7 @@
 }
 
 function clickRock() {
-  const rockItem = document.querySelector('img[alt="rock"]')
+  const rockItem = document.querySelector('.transition-all:not(.from-transparent) > .transition-opacity img[alt="rock"]')
   if (rockItem) {
     rockItem.click();
     console.log("Clicked rock.");
@@ -15,19 +15,20 @@ function clickRock() {
 }
 
 function clickPlayLeft() {
-  const playLeftBtn = document.querySelectorAll('button.border-solid.text-white')
+  const playLeftBtn = document.querySelector('button.border-solid.text-white')
   if (playLeftBtn) {
     playLeftBtn.click();
     console.log("Clicked Play continue.");
   }
 }
 
+clickPlayButton()
+
 setInterval(() => {
-  clickPlayButton();
   clickPlayLeft();
 }, 2000);
 
 
 setInterval(() => {
   clickRock()
-}, 500);
+}, 300);
