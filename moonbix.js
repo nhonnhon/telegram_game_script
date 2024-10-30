@@ -63,6 +63,6 @@ function playMoonbix() {
         }
       }
     }
-  }, 736);
+  }, 850);
 }
 playMoonbix();
