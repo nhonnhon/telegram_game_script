@@ -3,7 +3,7 @@
   window.BlumAC = true;
 
   function clickPlayButton() {
-    const playButton = document.querySelector(".play-btn");
+    const playButton = document.querySelector(".pages-index-game .kit-pill");
     if (playButton) {
       playButton.click();
       console.log("Clicked Play button.");
